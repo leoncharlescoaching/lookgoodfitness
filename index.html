@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leon Charles Coaching — The Weekly Email</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .logo-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .logo-header img {
+    max-width: 300px;
+    height: auto;
+    opacity: 0.95;
+  }
+  .hero-photo {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 2px solid #333;
+  }
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  h1 span {
+    color: #E24B4A;
+  }
+  .tagline {
+    font-size: 18px;
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .tagline strong {
+    color: #ffffff;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .what-you-get {
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 32px;
+  }
+  .what-you-get h2 {
+    font-size: 14px;
+    color: #E24B4A;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .benefit {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #e5e5e5;
+  }
+  .benefit:last-child { margin-bottom: 0; }
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #E24B4A;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 14px;
+    flex-shrink: 0;
+  }
+  .not-for-you {
+    border: 1px solid #E24B4A;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .not-for-you h3 {
+    font-size: 12px;
+    color: #E24B4A;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .not-for-you p {
+    font-size: 15px;
+    color: #9ca3af;
+    line-height: 1.7;
+  }
+  .not-for-you strong {
+    color: #ffffff;
+  }
+  .form-section {
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  .form-section h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .form-section p {
+    color: #9ca3af;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+  input[type="email"], input[type="text"] {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    background: #0a0a0a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 12px;
+    font-family: inherit;
+  }
+  input[type="email"]:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #E24B4A;
+  }
+  button {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 900;
+    background: #E24B4A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: inherit;
+    transition: background 0.2s;
+  }
+  button:hover {
+    background: #C93E3D;
+  }
+  .privacy {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 16px;
+  }
+  .footer {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-top: 40px;
+    line-height: 1.8;
+  }
+  .footer a {
+    color: #9ca3af;
+    text-decoration: none;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 28px; }
+    .tagline { font-size: 16px; }
+    .form-section { padding: 24px; }
+    .logo-header img { max-width: 220px; }
+    .hero-photo { width: 180px; height: 180px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="logo-header">
+    <img src="assets/logo.png" alt="Look Good Fitness — Leon Charles Coaching">
+  </div>
+
+  <div class="hero-photo">
+    <img src="assets/leon.jpg" alt="Leon Charles">
+  </div>
+
+  <h1>For The Dad Who <span>Knows</span> He Needs To Sort Himself Out</h1>
+
+  <p class="tagline">
+    <strong>Alright brother.</strong>
+    If you've landed here you know the score. You're running on caffeine. Telling yourself you'll start Monday. Picking the baggy top because you can't be arsed with the tight one anymore. Been there mate. Every week I'll drop you an email. The stuff I don't post on Instagram. Straight from me to you.
+  </p>
+
+  <div class="what-you-get">
+    <h2>Here's the deal</h2>
+    <div class="benefit"><span class="dot"></span>One email a week. Read it with your coffee.</div>
+    <div class="benefit"><span class="dot"></span>Real stuff from what's working with my clients right now. Not recycled fitness bollocks I read on someone else's page.</div>
+    <div class="benefit"><span class="dot"></span>I'm not gonna spam your inbox. If I've got nothing worth telling you, you won't hear from me.</div>
+    <div class="benefit"><span class="dot"></span>The uncomfortable truths I don't post on Instagram. Deeper. More honest. Actually useful.</div>
+    <div class="benefit"><span class="dot"></span>If the email ties into a reel I've posted, I'll drop that in too. Watch it, read it, take what you need.</div>
+    <div class="benefit"><span class="dot"></span>When the Strong Dad Reset opens up, you find out first. Priority list gets earlybird. Everyone else pays full whack.</div>
+  </div>
+
+  <div class="not-for-you">
+    <h3>Look, this isn't for you if</h3>
+    <p>You want someone to tell you what you want to hear. You get offended by a bloke swearing. You're after another motivational quote to screenshot and forget by lunchtime. You want a coach who tells you "you've got this brother" and takes your money.<br><br><strong>No hard feelings mate. Just don't waste your time or mine.</strong></p>
+  </div>
+
+  <div class="form-section">
+    <h2>Right then, let's go</h2>
+    <p>Chuck your details in below. First email will hit your inbox soon.</p>
+
+    <!-- MAILCHIMP FORM - REPLACE THE ACTION URL BELOW WITH YOUR MAILCHIMP FORM ACTION URL -->
+    <form action="REPLACE_WITH_YOUR_MAILCHIMP_FORM_URL" method="post" target="_blank">
+      <input type="text" name="FNAME" placeholder="First name" required>
+      <input type="email" name="EMAIL" placeholder="Email address" required>
+      <button type="submit">Get me on it</button>
+    </form>
+
+    <p class="privacy">One email a week. Unsubscribe any time. I hate spam as much as you do.</p>
+  </div>
+
+  <div class="footer">
+    <a href="https://instagram.com/leoncharlesofficial">@leoncharlesofficial</a><br>
+    Leon Charles Coaching | Look Good Fitness Ltd
+  </div>
+
+</div>
+</body>
+</html>
