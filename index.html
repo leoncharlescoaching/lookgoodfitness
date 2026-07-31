@@ -204,6 +204,7 @@
 </style>
 </head>
 <body>
+  <iframe name="mailchimpSubmitFrame" title="Mailchimp signup submission" hidden></iframe>
 <div class="container">
 
   <div class="logo-header">
@@ -243,7 +244,7 @@
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          target="_blank">
+          target="mailchimpSubmitFrame">
       <input type="text" name="FNAME" id="mce-FNAME" placeholder="First name" required>
       <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Email address" required>
 
@@ -257,6 +258,7 @@
       </div>
 
       <button type="submit" name="subscribe" id="mc-embedded-subscribe">Get me on it</button>
+      <p id="signup-status" style="display:none; margin-top:14px; color:#ffffff; text-align:center; font-size:14px;"></p>
     </form>
 
     <p class="privacy">One email a week. Unsubscribe any time. I hate spam as much as you do.</p>
@@ -268,5 +270,27 @@
   </div>
 
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("mc-embedded-subscribe-form");
+    const button = document.getElementById("mc-embedded-subscribe");
+    const status = document.getElementById("signup-status");
+
+    if (!form || !button || !status) return;
+
+    form.addEventListener("submit", function () {
+      button.disabled = true;
+      button.textContent = "ADDING YOU...";
+
+      window.setTimeout(function () {
+        status.style.display = "block";
+        status.textContent = "You're on the list. Check your inbox to confirm.";
+        button.textContent = "YOU'RE IN";
+      }, 900);
+    });
+  });
+</script>
+
 </body>
 </html>
